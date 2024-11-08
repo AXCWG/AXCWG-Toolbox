@@ -1,6 +1,8 @@
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.bundle'
+import { useState } from 'react';
+import './App.css';
+
 
 function NavBar() {
   return <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -11,7 +13,7 @@ function NavBar() {
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="https://axcwg.github.io/">Blog</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
@@ -26,12 +28,62 @@ function NavBar() {
 }
 
 function App() {
+  const [heightColorBlock, setHeightColorBlock] = useState("200px");
   return (
     <>
       <NavBar />
       <div className='container'>
-        <h1 className='display-1 text-center mt-5'>Toolbox</h1>
-        <div className='text-center'>Maintained in </div>
+
+        <h1 className='display-1 text-center mt-5'>AX</h1>
+        <div className='text-center'>Maintained in <a href='https://github.com/AXCWG/AXCWG-Toolbox'>this repo.</a></div>
+        <div className='row mt-5'>
+          <div className='col-3 block' style={{ backgroundColor: "rgb(255,0,0)", height: heightColorBlock }}>
+
+          </div>
+          <div className='col-3 block' style={{ backgroundColor: "rgb(0,255,0)", height: heightColorBlock }}>
+
+          </div>
+          <div className='col-3 block' style={{ backgroundColor: "rgb(0,0,255)", height: heightColorBlock }}>
+
+          </div>
+          <div className='col-3 block' style={{ backgroundColor: "rgb(128,128,128)", height: heightColorBlock }} >
+
+          </div>
+        </div>
+        <div className='row'>
+          <div className='col-3 block' style={{ backgroundColor: "rgb(0,255,255)", height: heightColorBlock }}>
+
+          </div>
+          <div className='col-3 block' style={{ backgroundColor: "rgb(255,0,255)", height: heightColorBlock }}>
+
+          </div>
+          <div className='col-3 block' style={{ backgroundColor: "rgb(255,255,0)", height: heightColorBlock }}>
+
+          </div>
+          <div className='col-3 block' style={{ backgroundColor: "black", height: heightColorBlock }} >
+
+          </div>
+        </div>
+        <button onClick={() => { setHeightColorBlock("100px") }} style={{ width: "50%" }} className='btn btn-primary text-center'>Up</button>
+        <button onClick={() => { setHeightColorBlock("200px") }} style={{ width: "50%" }} className='btn btn-primary text-center'>Down</button>
+        <div className='row mt-5'>
+          <div className='col-4'>
+            <div className="card">
+              <div class="card-body" >Content</div>
+            </div>
+          </div>
+          <div className='col-4'>
+            <div className="card">
+              <div class="card-body">Content</div>
+            </div>
+          </div>
+          <div className='col-4'>
+            <div className="card">
+              <div class="card-body">Content</div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </>
   );

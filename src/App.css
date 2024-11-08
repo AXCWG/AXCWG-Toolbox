@@ -1,0 +1,16 @@
+.block{
+  transition: all .5s;
+  
+}
+.card{
+  transition: all .2s;
+
+
+}
+.card:hover{
+  scale: 1.05;
+  box-shadow: 0px 10px 20px 1px rgba(0,0,0,0.2);
+}
+.card-body{
+  user-select: none;
+}
