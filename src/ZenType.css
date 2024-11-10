@@ -1,0 +1,18 @@
+#root{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+}
+textarea{
+    resize: none;
+    flex-grow: 200;
+}
+#sub{
+    display: flex;
+    flex-direction: row;
+}
+.btn{
+    flex-grow: 200;
+}
