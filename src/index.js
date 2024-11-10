@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ZenType from './ZenType';
+import Iwtcms from './IWTCMS';
 
 
 const router = createBrowserRouter([
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   },
   {path: "/zen",
     element: <ZenType/>
+  },
+  {
+    path: "/iwtcms",
+    element: <Iwtcms/>
   }
 ])
 const root = ReactDOM.createRoot(document.getElementById('root'));
