@@ -16,10 +16,7 @@ function NavBar() {
             <a class="nav-link" href="https://axcwg.github.io/">Blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">IWTCMS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="/iwtcms">IWTCMS</a>
           </li>
         </ul>
       </div>
