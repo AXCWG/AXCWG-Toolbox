@@ -16,10 +16,7 @@ function NavBar() {
             <a class="nav-link" href="https://axcwg.github.io/">Blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="/iwtcms">IWTCMS</a>
           </li>
         </ul>
       </div>
@@ -67,17 +64,17 @@ function App() {
         <button onClick={() => { setHeightColorBlock("100px") }} style={{ width: "50%" }} className='btn btn-primary text-center'>Up</button>
         <button onClick={() => { setHeightColorBlock("200px") }} style={{ width: "50%" }} className='btn btn-primary text-center'>Down</button>
         <div className='row mt-5'>
-          <div className='col-4'>
-            <div className="card">
-              <div class="card-body" >Content</div>
+          <div className='col-md-4 mt-3'>
+            <div className="card" onClick={()=>{window.location.href = "/iwtcms"}}>
+              <div class="card-body" ><h1>IWTCMS</h1><div>Control your Minecraft server remotely and securely. A tool meant to use cooperate with the mod with the same name. </div></div>
             </div>
           </div>
-          <div className='col-4'>
-            <div className="card">
-              <div class="card-body">Content</div>
+          <div className='col-md-4 mt-3'>
+            <div className="card" onClick={()=>{window.location.href = "/zen"}}>
+              <div class="card-body"><h1>Zen Type</h1><div>Can be determined as the shitpost of the site. </div></div>
             </div>
           </div>
-          <div className='col-4'>
+          <div className='col-md-4 mt-3'>
             <div className="card">
               <div class="card-body">Content</div>
             </div>
