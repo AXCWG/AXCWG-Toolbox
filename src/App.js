@@ -25,6 +25,9 @@ function NavBar() {
       </button>
       <div className="collapse navbar-collapse" id="collapsibleNavbar">
         <ul className="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="https://axcwg.github.io">Blog</a>
+          </li>
           {
             listurl.map(url => <li class="nav-item">
               <a class="nav-link" href={url.url}>{url.name}</a>
