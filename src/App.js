@@ -3,21 +3,33 @@ import 'bootstrap/dist/js/bootstrap.bundle'
 import { useState } from 'react';
 import './App.css';
 
+var listurl = [
+  {
+    name: "ZenType",
+    url: "/AXCWG-Toolbox/#/zen",
+    desc: "Can be determined as the shitpost of the site. "
+  },
+  {
+    name: "IWTCMS",
+    url: "/AXCWG-Toolbox/#/iwtcms",
+    desc: "Control your Minecraft server remotely and securely. A tool meant to use cooperate with the mod with the same name. "
+  }
+]
+
 
 function NavBar() {
-  return <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
+  return <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div className="container-fluid">
+      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span className="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="https://axcwg.github.io/">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/iwtcms">IWTCMS</a>
-          </li>
+      <div className="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul className="navbar-nav">
+          {
+            listurl.map(url => <li class="nav-item">
+              <a class="nav-link" href={url.url}>{url.name}</a>
+            </li>)
+          }
         </ul>
       </div>
     </div>
@@ -63,14 +75,21 @@ function App() {
         </div>
         <button onClick={() => { setHeightColorBlock("100px") }} style={{ width: "50%" }} className='btn btn-primary text-center'>Up</button>
         <button onClick={() => { setHeightColorBlock("200px") }} style={{ width: "50%" }} className='btn btn-primary text-center'>Down</button>
-        <div className='row mt-5'>
-          <div className='col-md-4 mt-3'>
-            <div className="card" onClick={()=>{window.location.href = "/iwtcms"}}>
+        <div className='row mt-5 mb-5'>
+          {listurl.map(url =>
+            <div className='col-md-4 mt-3'>
+              <div className="card" onClick={() => { window.location.href = url.url }}>
+                <div className="card-body" ><h1>{url.name}</h1><div>{url.desc}</div></div>
+              </div>
+            </div>
+          )}
+          {/* <div className='col-md-4 mt-3'>
+            <div className="card" onClick={() => { window.location.href = "/AXCWG-Toolbox/#/iwtcms" }}>
               <div class="card-body" ><h1>IWTCMS</h1><div>Control your Minecraft server remotely and securely. A tool meant to use cooperate with the mod with the same name. </div></div>
             </div>
           </div>
           <div className='col-md-4 mt-3'>
-            <div className="card" onClick={()=>{window.location.href = "/zen"}}>
+            <div className="card" onClick={() => { window.location.href = "/AXCWG-Toolbox/#/zen" }}>
               <div class="card-body"><h1>Zen Type</h1><div>Can be determined as the shitpost of the site. </div></div>
             </div>
           </div>
@@ -78,7 +97,7 @@ function App() {
             <div className="card">
               <div class="card-body">Content</div>
             </div>
-          </div>
+          </div> */}
 
         </div>
       </div>
