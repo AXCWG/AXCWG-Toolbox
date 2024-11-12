@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/AXCWG-Toolbox/static/css/main.03146fcc.css",
-    "main.js": "/AXCWG-Toolbox/static/js/main.dd7d1209.js",
+    "main.js": "/AXCWG-Toolbox/static/js/main.58c43730.js",
     "static/js/453.e1589031.chunk.js": "/AXCWG-Toolbox/static/js/453.e1589031.chunk.js",
     "index.html": "/AXCWG-Toolbox/index.html",
     "main.03146fcc.css.map": "/AXCWG-Toolbox/static/css/main.03146fcc.css.map",
-    "main.dd7d1209.js.map": "/AXCWG-Toolbox/static/js/main.dd7d1209.js.map",
+    "main.58c43730.js.map": "/AXCWG-Toolbox/static/js/main.58c43730.js.map",
     "453.e1589031.chunk.js.map": "/AXCWG-Toolbox/static/js/453.e1589031.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.03146fcc.css",
-    "static/js/main.dd7d1209.js"
+    "static/js/main.58c43730.js"
   ]
 }
